@@ -1,0 +1,144 @@
+/*@charset 'utf-8';
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 4px;
+    margin:0;
+    height: 100%;
+    gap:10px;
+    display: grid;
+    grid-template-columns: calc(20% - 10px) calc(80% - 10px );
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside section"
+    "footer footer"
+    
+    ;
+}
+header{
+    border:solid;
+    border-color: blue;
+    grid-area:header;
+}
+nav{
+    border: solid;
+    border-color: blueviolet;
+    grid-area: nav;
+}
+aside{
+    border: solid;
+    border-color: brown;
+    grid-area: aside;
+}
+section{
+    border: solid;
+    border-color: black;
+    grid-area: section;
+}
+footer{
+    border: solid;
+    border-color: chartreuse;
+    grid-area: footer;
+} */
+@charset 'utf-8';
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/834/435/non_2x/beautiful-space-background-vector.jpg');
+}
+div.contenedor{
+    display: grid;
+    min-height:100vh ;
+    gap:20px;
+    grid-template-columns: calc(25% - 15px) calc(25% - 15px) calc(25% - 15px) calc(25% - 15px);
+    grid-template-rows: 2fr 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "item1 item1 item1 item2"
+    "item3 item3 item4 item5"
+    "item6 item7 item4 item5"
+    "item6 item7 item8 item5"
+    "item9 item9 item9 item5"
+    "item10 item10 item11 item11"
+    "item12 item12 item12 item12";
+}
+div.contenedor div{
+    border: solid;
+    border-color: rgb(0, 0, 0);
+}
+div.item1{
+    grid-area: item1;
+    border: solid;
+    background-color: aquamarine;
+}
+.item2{
+    grid-area: item2;
+    background-color: blue;
+}
+.item3{
+    grid-area: item3;
+    background-color: brown;
+}
+.item4{
+    grid-area: item4;
+    background-color: cadetblue;
+}
+.item5{
+    grid-area: item5;
+    background-color: chocolate;
+}
+.item6{
+    grid-area: item6;
+    background-color: chartreuse;
+}
+.item7{
+    grid-area: item7;
+    background-color: cornflowerblue;
+}
+.item8{
+    grid-area: item8;
+    background-color: darkcyan;
+}
+.item9{
+    grid-area: item9;
+    background-color: darksalmon;
+}
+.item10{
+    grid-area: item10;
+    background-color: palevioletred;
+}
+.item11{
+    grid-area: item11;
+    background-color: orange;
+}
+.item12{
+    grid-area: item12;
+    background-color: yellowgreen;
+}
+@media (max-width: 480px) {
+    div.contenedor{
+        gap:6px;
+        min-height: 100vh;
+        grid-template-columns: calc(33.33% - 4px) calc(33.33% - 4px) calc(33.33% - 4px);
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr 2fr;
+        grid-template-areas: 
+        "item1 item1 item12"
+        "item3 item2 item12"
+        "item4 item5 item12"
+        "item6 item6 item12"
+        "item7 item8 item12"
+        "item9 item9 item12"
+        "item10 item11 item12"
+        ;
+    }
+
+}
+
